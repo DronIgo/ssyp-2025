@@ -1,7 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bwn6k2mptf7m2"]
+[gd_scene load_steps=6 format=3 uid="uid://bwn6k2mptf7m2"]
 
 [ext_resource type="PackedScene" uid="uid://clkci2rb2grru" path="res://assets/fbx/floor_tile_big_spikes.fbx" id="1_agxry"]
-[ext_resource type="Material" uid="uid://cub3xsmx6xvov" path="res://materials/import3.tres" id="2_0c7pl"]
+[ext_resource type="Texture2D" uid="uid://bups6jv5qfuee" path="res://assets/textures/dungeon_texture.png" id="2_1edh3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p267p"]
+albedo_texture = ExtResource("2_1edh3")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wppae"]
 size = Vector3(4, 0.118, 4)
@@ -12,10 +15,7 @@ size = Vector3(2, 2, 2)
 [node name="floor_tile_big_spikes" instance=ExtResource("1_agxry")]
 
 [node name="floor_tile_big_spikes" parent="." index="0"]
-surface_material_override/0 = ExtResource("2_0c7pl")
-
-[node name="spikes" parent="floor_tile_big_spikes" index="0"]
-surface_material_override/0 = ExtResource("2_0c7pl")
+surface_material_override/0 = SubResource("StandardMaterial3D_p267p")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
 

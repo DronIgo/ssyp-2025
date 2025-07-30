@@ -1,7 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bbvi62e5upn7q"]
+[gd_scene load_steps=6 format=3 uid="uid://bbvi62e5upn7q"]
 
 [ext_resource type="PackedScene" uid="uid://cdwnu2d6ot0an" path="res://assets/fbx/floor_tile_extralarge_grates.fbx" id="1_j5j4p"]
-[ext_resource type="Material" uid="uid://cub3xsmx6xvov" path="res://materials/import3.tres" id="2_dg2eh"]
+[ext_resource type="Texture2D" uid="uid://bups6jv5qfuee" path="res://assets/textures/dungeon_texture.png" id="2_wvhm2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_in4el"]
+albedo_texture = ExtResource("2_wvhm2")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tnhvd"]
 size = Vector3(8, 0.118, 8)
@@ -12,7 +15,7 @@ points = PackedVector3Array(-1, 0.15, 0.35, -1, 0.15, -0.35, -0.35, 0.15, -1, 0.
 [node name="floor_tile_extralarge_grates" instance=ExtResource("1_j5j4p")]
 
 [node name="floor_tile_extralarge_grates" parent="." index="0"]
-surface_material_override/0 = ExtResource("2_dg2eh")
+surface_material_override/0 = SubResource("StandardMaterial3D_in4el")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
 

@@ -1,7 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cblhj1kqlrc61"]
+[gd_scene load_steps=6 format=3 uid="uid://cblhj1kqlrc61"]
 
 [ext_resource type="PackedScene" uid="uid://c3k40xr64kwgj" path="res://assets/fbx/wall_Tsplit.fbx" id="1_svcsa"]
-[ext_resource type="Material" uid="uid://ceyort1jqgjre" path="res://materials/import.tres" id="2_lupte"]
+[ext_resource type="Texture2D" uid="uid://bups6jv5qfuee" path="res://assets/textures/dungeon_texture.png" id="2_grxwe"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_skgci"]
+albedo_texture = ExtResource("2_grxwe")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dw60j"]
 size = Vector3(4, 4, 1)
@@ -12,7 +15,7 @@ size = Vector3(1, 4, 1.50403)
 [node name="wall_Tsplit" instance=ExtResource("1_svcsa")]
 
 [node name="wall_Tsplit" parent="." index="0"]
-surface_material_override/0 = ExtResource("2_lupte")
+surface_material_override/0 = SubResource("StandardMaterial3D_skgci")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
 

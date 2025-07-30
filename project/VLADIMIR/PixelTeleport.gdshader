@@ -16,13 +16,13 @@ void fragment() {
 	float angle ;
 	float grayScaleDir = 0.0;
 	float grayScale = dot(texture(scrTex,pos).rgb,vec3(0.21,0.72,0.07));
-	
+
 	for (int x = 0; x < 8; x ++){
 		for (int y = 0; y < 8; y ++){
-			vec4 firstTex =  texture(scrTex,pos + 
+			vec4 firstTex =  texture(scrTex,pos +
 				vec2(float(x),float(y))*(1.0/ VIEWPORT_SIZE));
 			angle = firstTex.r;
-			
+
 			}
 		}
 	if (start){

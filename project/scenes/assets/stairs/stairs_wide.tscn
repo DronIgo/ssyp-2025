@@ -1,6 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://d03unn0hp31w8"]
+[gd_scene load_steps=6 format=3 uid="uid://v66cpqocbdci"]
 
-[ext_resource type="PackedScene" uid="uid://bjwvomk1imctt" path="res://assets/fbx/stairs_wide.fbx" id="1_udl1e"]
+[ext_resource type="PackedScene" uid="uid://dw1877tlpik2g" path="res://assets/fbx/stairs_wide.fbx" id="1_udl1e"]
+[ext_resource type="Texture2D" uid="uid://bups6jv5qfuee" path="res://assets/textures/dungeon_texture.png" id="2_hhnsf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ea3aw"]
+albedo_texture = ExtResource("2_hhnsf")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_udl1e"]
 custom_solver_bias = 0.355
@@ -11,6 +15,9 @@ points = PackedVector3Array(0, 0, 0, -0.055, 0, 0, 0, 0, -0.04, -0.055, 0, -0.04
 points = PackedVector3Array(0, 0, 0, 0.005, 0, 0, 0, 0, -0.051, 0.005, 0, -0.051, 0, -0.04, -0.051, 0.005, -0.04, -0.051, 0.005, -0.04, -0.04, 0, -0.04, -0.04)
 
 [node name="stairs_wide" instance=ExtResource("1_udl1e")]
+
+[node name="stairs_wide" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_ea3aw")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="stairs_wide" index="0"]
 

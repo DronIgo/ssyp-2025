@@ -123,7 +123,7 @@ void fragment() {
 	vec3 reflection_v = normalize(reflect(normalize(VERTEX), NORMAL));
 
 	bool intersection_exist = true;
-	
+
 	vec2 Uv = UV;
 
 	//vec3 test_vertex = (VERTEX + vec3(5., 5., 0.)) / 10.;
